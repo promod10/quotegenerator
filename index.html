@@ -9,6 +9,36 @@
 </head>
 <body>
     <h1>Quote Generator - Chulo Solution</h1>
+        <div class="container">
+        <header>
+            <h1>Quote Generator</h1>
+            <div class="controls">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="science">Science</option>
+                    <option value="life">Life</option>
+                </select>
+
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+                <button id="random">Random</button>
+
+                <label for="dark-mode">Dark Mode:</label>
+                <input type="checkbox" id="dark-mode">
+                
+                <label for="font-size">Font Size:</label>
+                <button id="decrease">A-</button>
+                <button id="increase">A+</button>
+            </div>
+        </header>
+        <main>
+            <blockquote id="quote">
+                <p id="quote-text">Select a category and click "Random" to get a quote!</p>
+                <footer id="quote-author"></footer>
+            </blockquote>
+        </main>
+        </div>
 
 
     <!-- link Javascript file -->
