@@ -44,6 +44,8 @@ const categorySelect = document.getElementById('category');
 const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
 const darkModeToggle = document.getElementById('dark-mode');
+const increaseFontSizeButton = document.getElementById('increase');
+const decreaseFontSizeButton = document.getElementById('decrease');
 
 
 // generator and update quotes
