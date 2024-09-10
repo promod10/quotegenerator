@@ -15,5 +15,7 @@
 10. Backend services and databases should not be used for this project.
 11. Host the app on Netlify and make the source code available on a GitHub repository.
 
-
-
+#### Javascript Ojbect
+I created javascript object as "quotes" which is the main object containing all the quotes and that is collection of quotes into categories has three properties: science, life and friendship. Each of these properties holds an array of quote objects.
+![Alt text](image.png)
+Each category contains an array of quote objects, where each object has a text (the quote) and an author (the person who said it).

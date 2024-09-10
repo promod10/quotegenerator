@@ -34,3 +34,31 @@ const quotes = {
     ],
 };
 
+
+// define variables
+let currentQuoteIndex = 0;
+let currentCategory = 'all';
+
+const categorySelect = document.getElementById('category');
+const quoteText = document.getElementById('quote-text');
+const quoteAuthor = document.getElementById('quote-author');
+
+
+// generator and update quotes
+
+const updateQuote = () => {
+    const categoryQuotes = currentCategory === 'all' ? Object.values(quotes).flat() : quotes[currentCategory];
+    if (categoryQuotes.length === 0) {
+        quoteText.textContent = "No quotes available for this category.";
+        quoteAuthor.textContent = "";
+        return;
+    }
+    const quote = categoryQuotes[currentQuoteIndex];
+    quoteText.textContent = quote.text;
+    quoteAuthor.textContent = `— ${quote.author}`;
+};
+
+
+// Initial quote display
+updateQuote();
+
