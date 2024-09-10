@@ -42,6 +42,7 @@ let currentCategory = 'all';
 const categorySelect = document.getElementById('category');
 const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
+const darkModeToggle = document.getElementById('dark-mode');
 
 
 // generator and update quotes
@@ -82,6 +83,13 @@ const showRandomQuote = () => {
     currentQuoteIndex = randomIndex;
     updateQuote();
 };
+
+// Select category of quotes
+categorySelect.addEventListener('change', (e) => {
+    currentCategory = e.target.value;
+    currentQuoteIndex = 0;
+    updateQuote();
+});
 
 
 // Call EventListeners
