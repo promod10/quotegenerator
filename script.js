@@ -58,6 +58,18 @@ const updateQuote = () => {
     quoteAuthor.textContent = `— ${quote.author}`;
 };
 
+// show Random quote
+const showRandomQuote = () => {
+    const categoryQuotes = currentCategory === 'all' ? Object.values(quotes).flat() : quotes[currentCategory];
+    const randomIndex = Math.floor(Math.random() * categoryQuotes.length);
+    currentQuoteIndex = randomIndex;
+    updateQuote();
+};
+
+
+document.getElementById('random').addEventListener('click', showRandomQuote);
+
+
 
 // Initial quote display
 updateQuote();
