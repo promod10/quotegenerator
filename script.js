@@ -38,6 +38,7 @@ const quotes = {
 // define variables
 let currentQuoteIndex = 0;
 let currentCategory = 'all';
+let fontSize = 1.2;
 
 const categorySelect = document.getElementById('category');
 const quoteText = document.getElementById('quote-text');
@@ -96,6 +97,11 @@ const toggleDarkMode = () => {
     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
 };
 
+// Font Alteration
+const changeFontSize = (increment) => {
+    fontSize = Math.max(0.5, fontSize + increment);
+    quoteText.style.fontSize = `${fontSize}em`;
+};
 
 
 // Call EventListeners
@@ -103,6 +109,8 @@ document.getElementById('next').addEventListener('click', showNextQuote);
 document.getElementById('prev').addEventListener('click', showPreviousQuote);
 document.getElementById('random').addEventListener('click', showRandomQuote);
 darkModeToggle.addEventListener('change', toggleDarkMode);
+increaseFontSizeButton.addEventListener('click', () => changeFontSize(0.1));
+decreaseFontSizeButton.addEventListener('click', () => changeFontSize(-0.1));
 
 
 
