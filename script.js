@@ -91,11 +91,18 @@ categorySelect.addEventListener('change', (e) => {
     updateQuote();
 });
 
+//  Change page dark and light mode
+const toggleDarkMode = () => {
+    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+};
+
+
 
 // Call EventListeners
 document.getElementById('next').addEventListener('click', showNextQuote);
 document.getElementById('prev').addEventListener('click', showPreviousQuote);
 document.getElementById('random').addEventListener('click', showRandomQuote);
+darkModeToggle.addEventListener('change', toggleDarkMode);
 
 
 
