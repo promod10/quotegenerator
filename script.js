@@ -58,6 +58,23 @@ const updateQuote = () => {
     quoteAuthor.textContent = `— ${quote.author}`;
 };
 
+// Generate Next Quote -> increment 1 index of object
+const showNextQuote = () => {
+    const categoryQuotes = currentCategory === 'all' ? Object.values(quotes).flat() : quotes[currentCategory];
+    currentQuoteIndex = (currentQuoteIndex + 1) % categoryQuotes.length;
+    updateQuote();
+};
+
+// Generate Next Quote -> decrement 1 index of object
+const showPreviousQuote = () => {
+    const categoryQuotes = currentCategory === 'all' ? Object.values(quotes).flat() : quotes[currentCategory];
+    currentQuoteIndex = (currentQuoteIndex - 1 + categoryQuotes.length) % categoryQuotes.length;
+    updateQuote();
+};
+
+
+
+
 // show Random quote
 const showRandomQuote = () => {
     const categoryQuotes = currentCategory === 'all' ? Object.values(quotes).flat() : quotes[currentCategory];
@@ -67,6 +84,9 @@ const showRandomQuote = () => {
 };
 
 
+// Call EventListeners
+document.getElementById('next').addEventListener('click', showNextQuote);
+document.getElementById('prev').addEventListener('click', showPreviousQuote);
 document.getElementById('random').addEventListener('click', showRandomQuote);
 
 
