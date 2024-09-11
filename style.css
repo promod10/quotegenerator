@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1px;
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.05);
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button, select, input[type="checkbox"] {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quote-box {
+    font-size: 24px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .quote-box {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+button, select, input[type="checkbox"] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.dark-mode button, .dark-mode select, .dark-mode input[type="checkbox"] {
+    background-color: #444;
+    border-color: #555;
+    color: #ddd;
+}

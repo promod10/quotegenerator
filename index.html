@@ -8,29 +8,37 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Quote Generator - Chulo Solution</h1>
-        <div class="container">
+    <div class="nav">
+        <h1>Quote Generator - Chulo Solution</h1>
+        <label for="dark-mode">Dark Mode:</label>
+        <input type="checkbox" id="dark-mode">
+    </div>
+    
+    <div class="container">
         <header>
-            <h1>Quote</h1>
             <div class="controls">
-                <label for="category">Category:</label>
-                <select id="category">
-                    <option value="all">All</option>
-                    <option value="science">Science</option>
-                    <option value="life">Life</option>
-                    <option value="friendship">Friendship</option>
-                </select>
+                <label for="">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="all">All</option>
+                        <option value="science">Science</option>
+                        <option value="life">Life</option>
+                        <option value="friendship">Friendship</option>
+                    </select>
+                </label>
 
-                <button id="prev">Previous</button>
-                <button id="next">Next</button>
-                <button id="random">Random</button>
-
-                <label for="dark-mode">Dark Mode:</label>
-                <input type="checkbox" id="dark-mode">
+                <label for="">
+                    <button id="prev">Previous</button>
+                    <button id="next">Next</button>
+                    <button id="random">Random</button>
+                </label>
                 
-                <label for="font-size">Font Size:</label>
-                <button id="decrease">A-</button>
-                <button id="increase">A+</button>
+                <label for="">
+                    <label for="font-size">Font Size:</label>
+                    <button id="decrease">A-</button>
+                    <button id="increase">A+</button>
+                </label>
+                
             </div>
         </header>
         <main>

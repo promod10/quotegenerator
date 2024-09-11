@@ -110,12 +110,15 @@ const changeFontSize = (increment) => {
 document.getElementById('next').addEventListener('click', showNextQuote);
 document.getElementById('prev').addEventListener('click', showPreviousQuote);
 document.getElementById('random').addEventListener('click', showRandomQuote);
+// darkModeToggle.addEventListener('change', toggleDarkMode);
 darkModeToggle.addEventListener('change', toggleDarkMode);
 increaseFontSizeButton.addEventListener('click', () => changeFontSize(0.1));
 decreaseFontSizeButton.addEventListener('click', () => changeFontSize(-0.1));
 
 
 
+
+toggleDarkMode(); // Ensure correct mode on load
 // Initial quote display
 updateQuote();
 
