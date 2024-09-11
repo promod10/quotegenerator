@@ -56,3 +56,24 @@ button, select, input[type="checkbox"] {
     border-color: #555;
     color: #ddd;
 }
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    button, input[type="checkbox"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .quote-box {
+        font-size: 20px;
+    }
+}
